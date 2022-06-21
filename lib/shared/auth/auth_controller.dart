@@ -10,7 +10,7 @@ class AuthController {
   void setUser(BuildContext context, UserModel? user) {
     if (user != null) {
       saveUser(user);
-      Navigator.pushReplacementNamed(context, "/home");
+      Navigator.pushReplacementNamed(context, "/home", arguments: user);
     } else {
       Navigator.pushReplacementNamed(context, "/login");
     }

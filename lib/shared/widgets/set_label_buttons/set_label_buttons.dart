@@ -12,7 +12,9 @@ class SetLabelButtons extends StatelessWidget {
   final VoidCallback primaryOnPressed;
   final String secondaryLabel;
   final VoidCallback secundaryOnPressed;
-  final enablePrimaryColor;
+  final bool enablePrimaryColor;
+  final bool enableSecondaryColor;
+
   const SetLabelButtons({
     Key? key,
     required this.primaryLabel,
@@ -20,26 +22,43 @@ class SetLabelButtons extends StatelessWidget {
     required this.secondaryLabel,
     required this.secundaryOnPressed,
     this.enablePrimaryColor = false,
+    this.enableSecondaryColor = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.shape,
-      height: 56,
-      child: Row(
+      color: AppColors.background,
+      height: 57,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
-            child: LabelButton(
-              label: primaryLabel,
-              onPressed: primaryOnPressed,
-              style: enablePrimaryColor ? TextStyles.buttonPrimary : null,
+          Divider(
+            thickness: 1,
+            height: 1,
+            color: AppColors.stroke,
+          ),
+          Container(
+            height: 56,
+            child: Row(
+              children: [
+                Expanded(
+                  child: LabelButton(
+                    label: primaryLabel,
+                    onPressed: primaryOnPressed,
+                    style: enablePrimaryColor ? TextStyles.buttonPrimary : null,
+                  ),
+                ),
+                DividerVerticalWidget(),
+                Expanded(
+                    child: LabelButton(
+                  label: secondaryLabel,
+                  onPressed: secundaryOnPressed,
+                  style: enableSecondaryColor ? TextStyles.buttonPrimary : null,
+                )),
+              ],
             ),
           ),
-          DividerVerticalWidget(),
-          Expanded(
-              child: LabelButton(
-                  label: secondaryLabel, onPressed: secundaryOnPressed)),
         ],
       ),
     );
