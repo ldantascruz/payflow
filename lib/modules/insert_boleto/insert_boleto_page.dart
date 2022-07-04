@@ -5,7 +5,6 @@ import 'package:payflow/modules/insert_boleto/insert_boleto_controller.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/widgets/input_text/input_text_widget.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
-
 import '../../shared/themes/app_text_styles.dart';
 
 class InsertBoletoPage extends StatefulWidget {
@@ -65,7 +64,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
                   textAlign: TextAlign.center,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 45,
               ),
               Form(

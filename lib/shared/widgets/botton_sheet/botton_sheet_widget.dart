@@ -1,5 +1,3 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/widgets/set_label_buttons/set_label_buttons.dart';
@@ -61,7 +59,7 @@ class BottonSheetWidget extends StatelessWidget {
                       primaryOnPressed: primaryOnPressed,
                       secondaryLabel: secondaryLabel,
                       secundaryOnPressed: secundaryOnPressed),
-                  SizedBox(height: 2),
+                  const SizedBox(height: 2),
                 ]),
               ],
             ),

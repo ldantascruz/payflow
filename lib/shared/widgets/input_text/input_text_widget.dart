@@ -1,7 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
-
 import '../../themes/app_text_styles.dart';
 
 class InputTextWidget extends StatelessWidget {
@@ -60,7 +59,7 @@ class InputTextWidget extends StatelessWidget {
                 border: InputBorder.none,
               ),
             ),
-            Divider(
+            const Divider(
               height: 1,
               thickness: 1,
               color: AppColors.stroke,

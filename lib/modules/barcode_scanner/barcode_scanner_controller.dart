@@ -62,7 +62,7 @@ class BarcodeScannerController {
   }
 
   void scanWithCamera() {
-    Future.delayed(Duration(seconds: 20)).then((value) {
+    Future.delayed(const Duration(seconds: 20)).then((value) {
       if (status.hasBarcode == false) {
         status =
             BarcodeScannerStatus.error("Tempo excedido na leitura do boleto");

@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:payflow/modules/login/login_controler.dart';
 import 'package:payflow/shared/themes/app_colors.dart';
 import 'package:payflow/shared/themes/app_images.dart';
@@ -38,11 +35,11 @@ class _LoginPageState extends State<LoginPage> {
                 right: 0,
                 child: Image.asset(
                   AppImages.person,
-                  width: 256,
-                  height: 304,
+                  width: 206,
+                  height: 254,
                 )),
             Positioned(
-              bottom: size.height * 0.08,
+              bottom: size.height * 0.06,
               left: 0,
               right: 0,
               child: Column(
@@ -61,7 +58,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                        left: 40, right: 40, top: 15, bottom: 20),
+                        left: 40, right: 40, top: 10, bottom: 20),
                     child: SocialLoginButton(
                       onTap: () {
                         controller.googleSignIn(context);
