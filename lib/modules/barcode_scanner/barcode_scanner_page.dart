@@ -61,19 +61,20 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
           RotatedBox(
             quarterTurns: 1,
             child: Scaffold(
-                backgroundColor: Colors.transparent,
-                appBar: AppBar(
-                  backgroundColor: Colors.black,
-                  title: Text(
-                    "Escaneie o código de barras do boleto",
-                    style: TextStyles.buttonBackground,
-                  ),
-                  centerTitle: true,
-                  leading: BackButton(
-                    color: AppColors.background,
-                  ),
+              backgroundColor: Colors.transparent,
+              appBar: AppBar(
+                backgroundColor: Colors.black,
+                title: Text(
+                  "Escaneie o código de barras do boleto",
+                  style: TextStyles.buttonBackground,
                 ),
-                body: Column(children: [
+                centerTitle: true,
+                leading: const BackButton(
+                  color: AppColors.background,
+                ),
+              ),
+              body: Column(
+                children: [
                   Expanded(
                     child: Container(
                       color: Colors.black.withOpacity(0.6),
@@ -90,17 +91,25 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                       color: Colors.black.withOpacity(0.6),
                     ),
                   )
-                ]),
-                bottomNavigationBar: SetLabelButtons(
-                    primaryLabel: "Inserir código do boleto",
-                    primaryOnPressed: () {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        "/insert_boleto",
-                      );
-                    },
-                    secondaryLabel: "Adicionar da galeria",
-                    secundaryOnPressed: () {})),
+                ],
+              ),
+              bottomNavigationBar: SetLabelButtons(
+                primaryLabel: "Inserir código do boleto",
+                primaryOnPressed: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    "/insert_boleto",
+                  );
+                },
+                secondaryLabel: "Cancelar",
+                secundaryOnPressed: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    "/splash",
+                  );
+                },
+              ),
+            ),
           ),
           ValueListenableBuilder<BarcodeScannerStatus>(
             valueListenable: controller.statusNotifier,

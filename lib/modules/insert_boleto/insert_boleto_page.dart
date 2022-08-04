@@ -46,7 +46,7 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
-        leading: BackButton(color: AppColors.input),
+        leading: const BackButton(color: AppColors.input),
       ),
       body: SingleChildScrollView(
         child: Padding(

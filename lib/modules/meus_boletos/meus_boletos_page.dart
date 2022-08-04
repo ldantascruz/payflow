@@ -58,8 +58,8 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(
+          const Padding(
+            padding: EdgeInsets.symmetric(
               vertical: 24,
               horizontal: 24,
             ),

@@ -11,7 +11,7 @@ class LabelButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 56,
       child: TextButton(
           onPressed: onPressed,

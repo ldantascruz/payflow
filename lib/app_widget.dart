@@ -9,7 +9,7 @@ import 'modules/login/login_page.dart';
 import 'shared/themes/app_colors.dart';
 
 class AppWidget extends StatelessWidget {
-  AppWidget() {
+  AppWidget({Key? key}) : super(key: key) {
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp]);
   }
@@ -32,6 +32,7 @@ class AppWidget extends StatelessWidget {
         "/login": (context) => LoginPage(),
         "/barcode_scanner": (context) => const BarcodeScannerPage(),
         "/insert_boleto": (context) => InsertBoletoPage(
+              // ignore: prefer_null_aware_operators
               barcode: ModalRoute.of(context)! != null
                   ? ModalRoute.of(context)!.settings.arguments.toString()
                   : null,

@@ -7,8 +7,8 @@ import '../label_button/label_button.dart';
 class SetLabelButtons extends StatelessWidget {
   final String primaryLabel;
   final VoidCallback primaryOnPressed;
-  final String secondaryLabel;
-  final VoidCallback secundaryOnPressed;
+  final String? secondaryLabel;
+  final VoidCallback? secundaryOnPressed;
   final bool enablePrimaryColor;
   final bool enableSecondaryColor;
 
@@ -16,8 +16,8 @@ class SetLabelButtons extends StatelessWidget {
     Key? key,
     required this.primaryLabel,
     required this.primaryOnPressed,
-    required this.secondaryLabel,
-    required this.secundaryOnPressed,
+    this.secondaryLabel,
+    this.secundaryOnPressed,
     this.enablePrimaryColor = false,
     this.enableSecondaryColor = false,
   }) : super(key: key);
@@ -35,7 +35,7 @@ class SetLabelButtons extends StatelessWidget {
             height: 1,
             color: AppColors.stroke,
           ),
-          Container(
+          SizedBox(
             height: 56,
             child: Row(
               children: [
@@ -49,8 +49,8 @@ class SetLabelButtons extends StatelessWidget {
                 const DividerVerticalWidget(),
                 Expanded(
                   child: LabelButton(
-                    label: secondaryLabel,
-                    onPressed: secundaryOnPressed,
+                    label: secondaryLabel!,
+                    onPressed: secundaryOnPressed!,
                     style:
                         enableSecondaryColor ? TextStyles.buttonPrimary : null,
                   ),

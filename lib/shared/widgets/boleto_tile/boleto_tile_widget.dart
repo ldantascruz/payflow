@@ -40,19 +40,3 @@ class BoletoTileWidget extends StatelessWidget {
     );
   }
 }
-
-
-/*
-  trailing: Text.rich(
-          TextSpan(
-            text: "R\$ ",
-            style: TextStyles.trailingRegular,
-            children: [
-              TextSpan(
-                text: "$data.value!.toStringAsFixed(2)",
-                style: TextStyles.trailingBold,
-              ),
-            ],
-          ),
-        ),
-*/
