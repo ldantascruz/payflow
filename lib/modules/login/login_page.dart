@@ -19,7 +19,7 @@ class _LoginPageState extends State<LoginPage> {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: Container(
+      body: SizedBox(
         width: size.width,
         height: size.height,
         child: Stack(
@@ -30,16 +30,16 @@ class _LoginPageState extends State<LoginPage> {
               color: AppColors.primary,
             ),
             Positioned(
-                top: 32,
+                top: 50,
                 left: 0,
                 right: 0,
                 child: Image.asset(
                   AppImages.person,
-                  width: 206,
-                  height: 254,
+                  width: 356,
+                  height: 404,
                 )),
             Positioned(
-              bottom: size.height * 0.06,
+              bottom: size.height * 0.08,
               left: 0,
               right: 0,
               child: Column(
@@ -49,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   Image.asset(AppImages.logomini),
                   Padding(
                     padding: const EdgeInsets.only(
-                        top: 8, left: 32, right: 32, bottom: 8),
+                        top: 30, left: 32, right: 32, bottom: 30),
                     child: Text(
                       "Organize seus boletos em um só lugar",
                       textAlign: TextAlign.center,
