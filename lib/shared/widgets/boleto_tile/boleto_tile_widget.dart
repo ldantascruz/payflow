@@ -24,17 +24,35 @@ class BoletoTileWidget extends StatelessWidget {
           "Vence em ${data.dueDate}",
           style: TextStyles.captionBody,
         ),
-        trailing: Text.rich(TextSpan(
-          text: "R\$ ",
-          style: TextStyles.trailingRegular,
-          children: [
-            TextSpan(
-              text: "$data.value!.toStringAsFixed(2)",
-              style: TextStyles.trailingBold,
-            ),
-          ],
-        )),
+        trailing: Text.rich(
+          TextSpan(
+            text: "R\$ ",
+            style: TextStyles.trailingRegular,
+            children: [
+              TextSpan(
+                text: "${data.value!.toStringAsFixed(2)}",
+                style: TextStyles.trailingBold,
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
 }
+
+
+/*
+  trailing: Text.rich(
+          TextSpan(
+            text: "R\$ ",
+            style: TextStyles.trailingRegular,
+            children: [
+              TextSpan(
+                text: "$data.value!.toStringAsFixed(2)",
+                style: TextStyles.trailingBold,
+              ),
+            ],
+          ),
+        ),
+*/

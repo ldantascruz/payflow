@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyles.titleRegular,
                   children: [
                     TextSpan(
-                      text: "$widget.user.name",
+                      text: "${widget.user.name}",
                       style: TextStyles.titleBoldBackground,
                     ),
                   ],
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
           key: UniqueKey(),
         ),
       ][controller.currentPage],
-      bottomNavigationBar: Container(
+      bottomNavigationBar: SizedBox(
         height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                     color: AppColors.primary,
                     borderRadius: BorderRadius.circular(5)),
-                child: Icon(
+                child: const Icon(
                   Icons.add_box_outlined,
                   color: AppColors.background,
                 ),
